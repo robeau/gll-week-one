@@ -5,38 +5,49 @@
     <title>Circle Menu</title>
     <style>
 
-        div.square{
+        div.square {
             height: 100px;
             width: 100px;
-            margin: 1em;
             border-radius: 50%;
-            background-color: red;
-            color: white;
             overflow: hidden;
-            position: relative;
+            margin: 0 auto;
         }
 
-        div.square > div{
-            width: 40px;
-            height: 40px;
+        div.square > div {
+            width: 50px;
+            height: 50px;
             float: left;
-            margin: 1px;
-            background-color: blue;
             color: white;
-            overflow: hidden;
-            position: relative;
-            top: 10px;
-            left: 10px;
+            margin: 0 auto;
+            line-height: 50px;
+        }
+
+        #one {
+            background-color: red;
+            text-align: right;
+        }
+
+        #two {
+            background-color: orange;
+        }
+
+        #three {
+            background-color: green;
+            text-align: right;
+        }
+
+        #four {
+            background-color: blue;
         }
 
     </style>
 </head>
 <body>
     <div class="square">
-            <div style="border-top-left-radius: 100%;">one</div>
-            <div style="border-top-right-radius: 50%;">two</div>
-            <div style="border-bottom-left-radius: 50%;">three</div>
-            <div style="border-bottom-right-radius: 50%;">four</div>
+            <div id="one">one</div>
+            <div id="two">two</div>
+            <div id="three">three</div>
+            <div id="four">four</div>
         </div>
 </body>
 </html>
