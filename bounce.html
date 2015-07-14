@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        div.box {
+            width: 60%;
+            height: 300px;
+            border: 1px solid grey;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        div.ball {
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-color: red;
+            border: 1px solid black;
+            top: 10px;
+            left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Box and Ball</h1>
+    </header>
+    <div class="box">
+        <div class="ball"></div>
+    </div>
+    <script>
+        var box = document.querySelector('div.box');
+        var ball = document.querySelector('div.ball');
+        var xtop = 10;
+        var moving = false;
+        var down = true, top_datum = 0;
+
+        function move(){
+            if(down){ xtop+=10;}
+            else xtop-=10;
+
+            if(xtop >= 280){
+                down = false;
+                top_datum+=40;
+            }
+            if(xtop <= top_datum){
+                down = true;
+            }
+            ball.style.top = xtop + 'px';
+        }
+
+        var intervalid;
+
+        box.addEventListener('click', function(){
+            if (moving) {
+                clearInterval(intervalid);
+            }
+            else {
+               intervalid = setInterval(move, 100)
+            }
+            moving = !moving;
+        });
+    </script>
+</body>
+</html>

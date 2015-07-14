@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <style>
+        ul.menu {
+            list-style-type: none;
+            padding: 0;
+            border: 1px solid  gray;
+            background-color: #eee;
+        }
+
+        ul.menu > li {
+            float: left;
+            padding: 0;
+            background-color: #eee;
+        }
+
+        ul.menu > li:hover {
+            cursor: pointer;
+            background-color: #ddd;
+            /*css 3*/
+            transition: background-color 500ms ease;
+        }
+        ul.menu > li.right { /* 0 0 2 2 */
+            float: right;
+            color: #eee;
+        }
+        ul.menu > li.right:hover {
+            color: black;
+            transition: color 1s ease;
+        }
+        ul.submenu {
+            padding-left: 0.5em;
+            list-style-type: none;
+            font-size: 0.85em;
+            display: none;
+            position: absolute;
+        }
+        ul.menu > li:hover > ul.submenu {
+            display: block;
+        }
+
+        ul.submenu > li {
+            position: relative;
+            background-color: #dddddd;
+        }
+
+        ul.menu > li.clearfix-base{
+            float: none;
+            clear: both;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li>
+                Home
+            </li>
+            <li>
+                <div>
+                    Types of Developers
+                </div>
+                    <ul class="submenu">
+                        <li>UI Developers</li>
+                        <li>Node Developers</li>
+                        <li>MongoDB Developers</li>
+                    </ul>
+            </li>
+            <li class="right">Login</li>
+            <li class="clearfix-base"></li>
+        </ul>
+    </nav>
+</body>
+</html>

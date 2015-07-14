@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14 July</title>
+    <style>
+        body > div {
+            width: 50%;
+            height: 300px;
+            float: left;
+            color: white;
+            background-color: blue;
+            box-sizing: border-box;
+        }
+
+        body > div.last {
+            background-color: darkblue;
+            position: relative;
+        }
+
+        body > div > div {
+            min-height: 100%;
+            background-color: green;
+        }
+
+        body > div > div > div {
+            width: 50%;
+            margin: -60px auto 0 auto;
+            background-color: #c9b2fa;
+            color: purple;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="last">
+        <div>
+        </div>
+        <div>hello</div>
+    </div>
+</body>
+</html>
