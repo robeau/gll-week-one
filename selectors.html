@@ -23,13 +23,22 @@
             font-size: 40px;
         }
 
+        /** partial attribute selector **/
+        p[class~="red"] {
+            color: red;
+        }
+
+        img[alt*="moo"] {
+            height: 50px;
+        }
+
     </style>
 </head>
 <body>
 
     <p>testing forward slash</p>
-    <p class="lg">attribute selector</p>
+    <p class="lg red">attribute and partial attribute selector</p>
 
-
+    <img src="moon.jpg" alt="the moon is seen here" height="200px">
 </body>
 </html>

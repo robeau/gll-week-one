@@ -36,14 +36,19 @@
     <script>
         var box = document.querySelector('div.box');
         var ball = document.querySelector('div.ball');
-        var xtop = 10;
+        var xtop = 10,
+                xleft = 10;
         var moving = false;
         var down = true, top_datum = 0;
 
         function move(){
+            if (top_datum >= 280){
+                clearInterval(intervalid);
+                ball.style.top = '280px';
+            }
             if(down){ xtop+=10;}
             else xtop-=10;
-
+            xleft+=3;
             if(xtop >= 280){
                 down = false;
                 top_datum+=40;
@@ -52,6 +57,7 @@
                 down = true;
             }
             ball.style.top = xtop + 'px';
+            ball.style.left = xleft + 'px';
         }
 
         var intervalid;
