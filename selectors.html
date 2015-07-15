@@ -16,7 +16,7 @@
 
         /** attribute selector **/
         p[class] {
-            font-style: italic;
+            font-weight: bold;
         }
 
         .lg {
@@ -32,13 +32,20 @@
             height: 50px;
         }
 
+        /** particular attribute selection **/
+        *[class|="par"] {
+            font-family: "Impact", Charcoal, sans-serif;
+        }
+
     </style>
 </head>
 <body>
 
+    <h1>You are on page 43 of CSS The Definitive Guide</h1>
     <p>testing forward slash</p>
-    <p class="lg red">attribute and partial attribute selector</p>
+    <p class="par lg red">attribute and partial attribute selector</p>
 
     <img src="moon.jpg" alt="the moon is seen here" height="200px">
+    <p class="par lg blue">testing particular attribute selection</p>
 </body>
 </html>
